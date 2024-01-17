@@ -40,6 +40,8 @@ psql trivia < trivia.psql
 
 From within the `./src` directory first ensure you are working using your created virtual environment.
 
+Copy the `.env.example` to `.env` file and fill it with appropriate secrets to be able to connect your database.
+
 To run the server, execute:
 
 ```bash
