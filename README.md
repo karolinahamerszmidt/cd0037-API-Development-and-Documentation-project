@@ -47,3 +47,43 @@ Pay special attention to what data the frontend is expecting from each API respo
 By making notes ahead of time, you will practice the core skill of being able to read and understand code and will have a simple plan to follow to build out the endpoints of your backend API.
 
 > View the [Frontend README](./frontend/README.md) for more details.
+
+### Notes
+
+create conda
+```bash
+conda create --name trivia python=3.8
+```
+
+activate conda
+```bash
+conda activate trivia
+```
+
+turn on the database
+```bash
+brew services start postgresql@14
+```
+
+turn off the database
+```bash
+brew services stop postgresql@14
+```
+
+create a trivia database
+```bash
+createdb trivia
+```
+
+deploy the tests
+```bash
+dropdb trivia_test && \
+  createdb trivia_test && \
+  psql trivia_test < trivia.psql && \
+  python test_flaskr.py
+```
+
+Save installed packages to a file.
+```bash
+pip freeze > requirements.txt
+```
